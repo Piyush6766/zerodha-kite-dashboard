@@ -1,0 +1,18 @@
+@import "tailwindcss";
+/* small MUI + Tailwind harmony */
+html, body, #root { height: 100%; }
+body { 
+    background-color: theme('colors.gray.50');
+    color: theme('colors.gray.900');
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.sidebar-scroll {
+  overflow-y: auto;
+}
+
+/* ensure chart container sizing */
+.chart-container {
+  min-height: 360px;
+  height: 360px;
+}
