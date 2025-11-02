@@ -1,17 +1,69 @@
-# React + Vite
+# 🪶 Zerodha Kite Dashboard Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **modern Zerodha Kite Dashboard UI (Post Login)** built with **React**, **Material-UI (MUI)**, **Tailwind CSS**, **Framer Motion**, and **React Router DOM**.  
+It includes authentication, protected routes, a detailed profile section, funds overview, connected apps, settings management, and smooth animations inspired by the real Zerodha platform.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖼️ Preview
 
-## React Compiler
+live demo: https://zerodha-kite-dashboard-seven.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+✅ **Authentication & Protected Routes**  
+- Secure login/logout using Context API  
+- Redirects to login on page refresh or if unauthenticated  
+- Session stored in `localStorage`  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# zerodha-kite-dashboard
+✅ **Modern UI & Styling**  
+- Built with **MUI + Tailwind hybrid styling**  
+- Zerodha-like **light theme** and typography  
+- Fully responsive and clean layout  
+
+✅ **Profile Section**  
+Includes multiple interactive tabs:
+- 💰 **Funds** – shows total balance and available margin  
+- 👤 **Profile** – displays user info, client ID, PAN, etc.  
+- ⚙️ **Settings** – email alerts, push notifications, preferences  
+- 🔗 **Connected Apps** – TradingView, Smallcase, Streak, etc.  
+- 🚪 **Logout** – confirmation and session clear  
+
+✅ **Animations & UX**  
+- Powered by **Framer Motion** for smooth transitions  
+- Skeleton loading states (for realistic feel)  
+- Clean, modular, and scalable component design  
+
+---
+
+## 🏗️ Tech Stack
+
+| Technology | Purpose |
+|-------------|----------|
+| **React 18+** | Core frontend framework |
+| **Material-UI (MUI v5)** | Pre-styled React components |
+| **Tailwind CSS** | Utility-first styling for layout & design |
+| **Framer Motion** | Page and tab animations |
+| **React Router DOM** | Navigation & route protection |
+| **Context API** | Authentication management |
+| **Vite** | Fast development build tool |
+
+---
+
+## 🎨 Zerodha-Inspired Theme
+
+**`muiTheme.js`**
+```js
+import { createTheme } from "@mui/material/styles";
+
+export const theme = createTheme({
+  palette: {
+    mode: "light",
+    primary: { main: "#1976d2" },   // Zerodha Blue
+    secondary: { main: "#0f172a" }, // Dark Navy
+    background: { default: "#f8fafc", paper: "#ffffff" },
+  },
+  typography: {
+    fontFamily: "'Inter', 'Roboto', sans-serif",
+  },
+});
